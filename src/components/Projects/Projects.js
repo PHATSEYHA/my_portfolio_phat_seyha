@@ -4,6 +4,23 @@ import "./Projects.css";
 
 function Projects() {
   const projects = [
+    
+    {
+      title: "VechchSal",
+      description:
+        "Developed a comprehensive healthcare platform with appointment scheduling, medical article sharing, and secure doctor-patient communication",
+      image: "/assets/projects/VCS.png",
+      link: "https://vcsuser.westernuniversity.digital/",
+      tags: ["Vue.JS", "Bootstrap", "Laravel", "MySQL"],
+    },
+    {
+      title: "Green Folio",
+      description:
+        "Developed an interactive web application using JavaScript to raise awareness about environmental issues.",
+      image: "/assets/projects/project2.png",
+      link: "http://antstudents.com/WenScholarshipBatch1/js/g5/index.html",
+      tags: ["Javascript", "Bootstrap", "API"],
+    },
     {
       title: "Cambodia Donation Center",
       description:
@@ -13,12 +30,12 @@ function Projects() {
       tags: ["Bootstrap", "CSS Modules", "Responsive"],
     },
     {
-      title: "Green Folio",
+      title: "Cambodia Donation Center",
       description:
-        "Developed an interactive web application using JavaScript to raise awareness about environmental issues.",
-      image: "/assets/projects/project2.png",
-      link: "http://antstudents.com/WenScholarshipBatch1/js/g5/index.html",
-      tags: ["Javascript", "Bootstrap"],
+        "Build a Donation Platform ",
+      image: "/assets/projects/CDC.png",
+      link: "https://phatseyha.github.io/Donation_Bootstrap",
+      tags: ["HTML", "CSS"],
     },
     {
       title: "Movie Landing Page",
