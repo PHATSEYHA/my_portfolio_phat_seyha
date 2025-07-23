@@ -42,6 +42,15 @@ body {
   gap: 2rem;
 }
 
+.contact-detail{
+  display: flex;
+  gap: 20px;
+}
+
+.contact-icon{
+  margin-top: 13px;
+}
+
 /* Info Card */
 .contact-info {
   background: var(--card-bg);
@@ -67,6 +76,7 @@ body {
 .contact-form {
   background: var(--card-bg);
   padding: 40px;
+  padding-right: 80px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;

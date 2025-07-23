@@ -1,8 +1,13 @@
-import React, { useRef, useState } from 'react';
-import './Contact.css';
-import emailjs from '@emailjs/browser';
-import { FaPaperPlane, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import React, { useRef, useState } from "react";
+import "./Contact.css";
+import emailjs from "@emailjs/browser";
+import {
+  FaPaperPlane,
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const form = useRef();
@@ -16,18 +21,21 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'service_pu3u1ak',
-        'template_1ti3jdb',
+        "service_pu3u1ak",
+        "template_1ti3jdb",
         form.current,
-        'hIaZkeYMRud5cbjJg'
+        "hIaZkeYMRud5cbjJg"
       )
-      .then(() => {
-        setSendStatus('success');
-        form.current.reset();
-      }, (error) => {
-        setSendStatus('error');
-        console.error('Failed to send message:', error.text);
-      })
+      .then(
+        () => {
+          setSendStatus("success");
+          form.current.reset();
+        },
+        (error) => {
+          setSendStatus("error");
+          console.error("Failed to send message:", error.text);
+        }
+      )
       .finally(() => {
         setIsSending(false);
       });
@@ -39,9 +47,9 @@ const Contact = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        when: "beforeChildren"
-      }
-    }
+        when: "beforeChildren",
+      },
+    },
   };
 
   const itemVariants = {
@@ -50,14 +58,14 @@ const Contact = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   return (
     <section className="contact-section" id="contact">
-      <motion.div 
+      <motion.div
         className="contact-container"
         initial="hidden"
         whileInView="visible"
@@ -66,36 +74,33 @@ const Contact = () => {
       >
         <motion.div className="contact-info" variants={itemVariants}>
           <h2>Contact Me</h2>
-          <p className="contact-subtitle">Have questions or want to work together? Drop me a message!</p>
-          
+          <p className="contact-subtitle">
+            Have questions or want to work together? Drop me a message!
+          </p>
+
           <div className="contact-detail">
-            <FaEnvelope className="contact-icon" />
-            <div>
-              <h3>Email</h3>
-              <p>phatseyha1608@gmail.com</p>
-            </div>
+            <FaEnvelope className="contact-icon " />
+            <p>phatseyha1608@gmail.com</p>
           </div>
-          
+
           <div className="contact-detail">
             <FaPhone className="contact-icon" />
             <div>
-              <h3>Phone</h3>
               <p>+885 70-984-770</p>
             </div>
           </div>
-          
+
           <div className="contact-detail">
             <FaMapMarkerAlt className="contact-icon" />
             <div>
-              <h3>Location</h3>
               <p>Phnom Penh, Cambodia</p>
             </div>
           </div>
         </motion.div>
 
-        <motion.form 
-          ref={form} 
-          onSubmit={sendEmail} 
+        <motion.form
+          ref={form}
+          onSubmit={sendEmail}
           className="contact-form"
           variants={itemVariants}
         >
@@ -109,7 +114,7 @@ const Contact = () => {
               required
             />
           </div>
-          
+
           <div className="form-group">
             <label htmlFor="email">Your Email</label>
             <input
@@ -120,7 +125,7 @@ const Contact = () => {
               required
             />
           </div>
-          
+
           <div className="form-group">
             <label htmlFor="message">Your Message</label>
             <textarea
@@ -131,19 +136,19 @@ const Contact = () => {
               required
             />
           </div>
-          
+
           <button type="submit" disabled={isSending}>
             {isSending ? (
-              'Sending...'
+              "Sending..."
             ) : (
               <>
                 <FaPaperPlane className="send-icon" /> Send Message
               </>
             )}
           </button>
-          
-          {sendStatus === 'success' && (
-            <motion.div 
+
+          {sendStatus === "success" && (
+            <motion.div
               className="status-message success"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -151,9 +156,9 @@ const Contact = () => {
               ✅ Message sent successfully!
             </motion.div>
           )}
-          
-          {sendStatus === 'error' && (
-            <motion.div 
+
+          {sendStatus === "error" && (
+            <motion.div
               className="status-message error"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
