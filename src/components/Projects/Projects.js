@@ -128,7 +128,7 @@ function Projects() {
       </div>
 
       {/* Certificates Section */}
-      <div className="section-header" style={{ marginTop: "4rem" }}>
+      {/* <div className="section-header" style={{ marginTop: "4rem" }}>
         <h2 className="section-title">
           <span className="highlight">My Certificates</span>
         </h2>
@@ -147,7 +147,7 @@ function Projects() {
             skills={cert.skills}
           />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

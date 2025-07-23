@@ -25,7 +25,7 @@ body.light {
 body {
   background: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Section */
@@ -42,12 +42,12 @@ body {
   gap: 2rem;
 }
 
-.contact-detail{
+.contact-detail {
   display: flex;
   gap: 20px;
 }
 
-.contact-icon{
+.contact-icon {
   margin-top: 13px;
 }
 
@@ -58,8 +58,6 @@ body {
   border-radius: 16px;
   transition: background 0.3s;
 }
-
-
 
 .contact-info h2 {
   font-size: 2rem;
@@ -83,7 +81,6 @@ body {
   gap: 1rem;
   transition: background 0.3s;
 }
-
 
 .contact-form input,
 .contact-form textarea {
@@ -125,8 +122,10 @@ body {
   .contact-section {
     padding: 60px 15px;
   }
-  .contact-info,
-  .contact-form {
+  .contact-info {
     padding: 30px;
+  }
+  .contact-form {
+    padding-right: 80px;
   }
 }
